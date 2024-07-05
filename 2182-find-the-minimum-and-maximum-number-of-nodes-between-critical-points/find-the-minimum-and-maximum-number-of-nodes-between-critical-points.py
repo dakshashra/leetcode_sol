@@ -10,7 +10,6 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        mn=999999
         
         pos=[]
         curr=head
@@ -29,7 +28,7 @@ class Solution(object):
             wo=wo.next
         
         if len(pos)>=2:
-            
+            mn=pos[-1]
             for i in range(len(pos)-1):
                 if pos[i+1]-pos[i]<mn:
                     mn=pos[i+1]-pos[i]
