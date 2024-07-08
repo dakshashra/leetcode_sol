@@ -9,12 +9,10 @@ class Solution(object):
         x=0
         ll=len(l)
         cp=l
-        while len(l)>1:
+        for i in range(n-1):
             
             x+=(k-1)
             x=x%len(l)
-            print('poping', l[x%len(l)])       
-            l.pop(x%len(l))
-            print(l, 'x=', x)
+            l.pop(x)
                 
         return l[0]
