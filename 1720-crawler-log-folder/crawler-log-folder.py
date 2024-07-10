@@ -4,11 +4,7 @@ class Solution:
         for i in logs:
             if i[0] is not '.':
                 ans+=1
-            else:
-                if len(i)==3:
-                    ans=ans-1
-                    if ans<0:
-                        ans=0
-                else:
-                    continue
+            elif len(i)==3:
+                    ans=max(0, ans-1)
+                
         return ans
