@@ -6,7 +6,9 @@ class Solution:
                 ans+=1
             else:
                 if len(i)==3:
-                    ans=max(0, ans-1)
+                    ans=ans-1
+                    if ans<0:
+                        ans=0
                 else:
                     continue
         return ans
